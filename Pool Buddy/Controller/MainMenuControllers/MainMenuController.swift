@@ -18,11 +18,17 @@ class MainMenuController: UICollectionViewController , UICollectionViewDelegateF
         navigationItem.title = "Pool Buddy"
         
         collectionView?.backgroundColor = .white
-        
         collectionView?.alwaysBounceVertical = true
         
         collectionView?.register(MainMenuCell.self, forCellWithReuseIdentifier: cellId)
     }
+    
+//    func setBackgroundImage() {
+//        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//        backgroundImage.image = UIImage(named: "poolwater2")
+//        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+//        self.view.insertSubview(backgroundImage, at: 0)
+//    }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainMenuCell
@@ -30,7 +36,7 @@ class MainMenuController: UICollectionViewController , UICollectionViewDelegateF
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -38,7 +44,7 @@ class MainMenuController: UICollectionViewController , UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 14, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
 }
 
