@@ -1,5 +1,5 @@
 //
-//  EquipmentVC.swift
+//  EquipmentController.swift
 //  Pool Buddy
 //
 //  Created by Allen Boynton on 11/19/17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class EquipmentVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class EquipmentController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
 }

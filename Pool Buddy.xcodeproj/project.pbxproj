@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		093D90961FC1D49500B07D8A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D90951FC1D49500B07D8A /* CustomTabBarController.swift */; };
-		093D90991FC1D59800B07D8A /* EquipmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D90981FC1D59800B07D8A /* EquipmentVC.swift */; };
+		093D90991FC1D59800B07D8A /* EquipmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D90981FC1D59800B07D8A /* EquipmentController.swift */; };
+		0984D0CF1FC2551600EB6CA7 /* StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0984D0CE1FC2551600EB6CA7 /* StatusBarStyle.swift */; };
 		0994843F1FC1C254007AEA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994843E1FC1C254007AEA7A /* AppDelegate.swift */; };
 		099484411FC1C254007AEA7A /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099484401FC1C254007AEA7A /* MainMenuController.swift */; };
 		099484461FC1C254007AEA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099484451FC1C254007AEA7A /* Assets.xcassets */; };
@@ -40,7 +41,8 @@
 
 /* Begin PBXFileReference section */
 		093D90951FC1D49500B07D8A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		093D90981FC1D59800B07D8A /* EquipmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentVC.swift; sourceTree = "<group>"; };
+		093D90981FC1D59800B07D8A /* EquipmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentController.swift; sourceTree = "<group>"; };
+		0984D0CE1FC2551600EB6CA7 /* StatusBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyle.swift; sourceTree = "<group>"; };
 		0994843B1FC1C254007AEA7A /* Pool Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pool Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0994843E1FC1C254007AEA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		099484401FC1C254007AEA7A /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 		0994845A1FC1C254007AEA7A /* Pool BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pool BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0994845E1FC1C254007AEA7A /* Pool_BuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool_BuddyUITests.swift; sourceTree = "<group>"; };
 		099484601FC1C254007AEA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		099484731FC1CB6C007AEA7A /* KittenSlant.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KittenSlant.ttf; path = ../../../PoolBuddy/PoolBuddy/PoolBuddy/KittenSlant.ttf; sourceTree = "<group>"; };
 		099484741FC1CE34007AEA7A /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		099484761FC1CE5C007AEA7A /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 		099484781FC1D195007AEA7A /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
@@ -85,12 +86,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		093D90971FC1D56300B07D8A /* CategoryVCs */ = {
+		093D90971FC1D56300B07D8A /* CategoryControllers */ = {
 			isa = PBXGroup;
 			children = (
-				093D90981FC1D59800B07D8A /* EquipmentVC.swift */,
 			);
-			path = CategoryVCs;
+			path = CategoryControllers;
+			sourceTree = "<group>";
+		};
+		093D909A1FC1F33D00B07D8A /* MainMenuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				099484401FC1C254007AEA7A /* MainMenuController.swift */,
+			);
+			path = MainMenuControllers;
+			sourceTree = "<group>";
+		};
+		093D909B1FC1F39700B07D8A /* EquipmentController */ = {
+			isa = PBXGroup;
+			children = (
+				093D90981FC1D59800B07D8A /* EquipmentController.swift */,
+			);
+			path = EquipmentController;
 			sourceTree = "<group>";
 		};
 		099484321FC1C254007AEA7A = {
@@ -164,7 +180,6 @@
 		0994846E1FC1C350007AEA7A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				099484731FC1CB6C007AEA7A /* KittenSlant.ttf */,
 				099484451FC1C254007AEA7A /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -173,9 +188,10 @@
 		0994846F1FC1C363007AEA7A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				099484401FC1C254007AEA7A /* MainMenuController.swift */,
-				093D90971FC1D56300B07D8A /* CategoryVCs */,
 				093D90951FC1D49500B07D8A /* CustomTabBarController.swift */,
+				093D909A1FC1F33D00B07D8A /* MainMenuControllers */,
+				093D909B1FC1F39700B07D8A /* EquipmentController */,
+				093D90971FC1D56300B07D8A /* CategoryControllers */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 			children = (
 				099484741FC1CE34007AEA7A /* Constraints.swift */,
 				099484761FC1CE5C007AEA7A /* RGB.swift */,
+				0984D0CE1FC2551600EB6CA7 /* StatusBarStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,7 +369,8 @@
 				099484751FC1CE34007AEA7A /* Constraints.swift in Sources */,
 				0994843F1FC1C254007AEA7A /* AppDelegate.swift in Sources */,
 				099484771FC1CE5C007AEA7A /* RGB.swift in Sources */,
-				093D90991FC1D59800B07D8A /* EquipmentVC.swift in Sources */,
+				093D90991FC1D59800B07D8A /* EquipmentController.swift in Sources */,
+				0984D0CF1FC2551600EB6CA7 /* StatusBarStyle.swift in Sources */,
 				0994847B1FC1D1C4007AEA7A /* BaseCell.swift in Sources */,
 				099484791FC1D195007AEA7A /* MainMenuCell.swift in Sources */,
 			);
