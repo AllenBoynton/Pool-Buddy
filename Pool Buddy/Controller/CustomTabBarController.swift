@@ -18,10 +18,10 @@ class CustomTabBarController: UITabBarController {
         tabBar.isTranslucent = false
         
         // Assign view controller
-        let equipmentVC = EquipmentVC(collectionViewLayout: UICollectionViewFlowLayout())
-        let navigationController = UINavigationController(rootViewController: equipmentVC)
-        navigationController.title = "Equipment"
-        navigationController.tabBarItem.image = UIImage(named: "")
+        let mainMenuController = MainMenuController(collectionViewLayout: UICollectionViewFlowLayout())
+        let navigationController = UINavigationController(rootViewController: mainMenuController)
+        navigationController.title = "Main Menu"
+        navigationController.tabBarItem.image = UIImage(named: "menu")
         
 //        let friendRequestsController = FriendRequestsController()
 //        let secondNavigationController = UINavigationController(rootViewController: friendRequestsController)
