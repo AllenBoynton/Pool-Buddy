@@ -14,10 +14,15 @@ class MainMenuCell: BaseCell {
         let iv = UIImageView()
         iv.image = UIImage(named: "equipment1")
         iv.layer.cornerRadius = 16
-        iv.layer.borderColor = UIColor.black.cgColor
-        iv.layer.borderWidth = 1
         iv.layer.masksToBounds = true
         return iv
+    }()
+    
+    let menuNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Category Name"
+        label.font = UIFont(name: "Optima-Bold", size: 18)
+        return label
     }()
     
     let dividerLineView: UIView = {
@@ -28,13 +33,18 @@ class MainMenuCell: BaseCell {
     
     override func setupViews() {
         
+        
+        
         addSubview(imageView)
+        addSubview(menuNameLabel)
         addSubview(dividerLineView)
         
-        addConstraintsWithFormat(format: "H:|[v0(80)]|", views: imageView)
-        addConstraintsWithFormat(format: "V:|[v0(80)]|", views: imageView)
+        addConstraintsWithFormat(format: "H:|-14-[v0(80)]-14-[v1]", views: imageView, menuNameLabel)
+        addConstraintsWithFormat(format: "V:|[v0(80)]", views: imageView)
         
-        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
-        addConstraintsWithFormat(format: "V:[v0(1)]|", views: dividerLineView)
+        addConstraintsWithFormat(format: "V:|-32-[v0]", views: menuNameLabel)
+        
+        addConstraintsWithFormat(format: "H:|-14-[v0]|", views: dividerLineView)
+        addConstraintsWithFormat(format: "V:[v0(1)]-2-|", views: dividerLineView)
     }
 }
