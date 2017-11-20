@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func dateComponentFromNSDate(_ date: Date)-> DateComponents{
+        
+        let calendarUnit: NSCalendar.Unit = [.hour, .day, .month, .year]
+        let dateComponents = (Calendar.current as NSCalendar).components(calendarUnit, from: date)
+        return dateComponents
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,12 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainMenuController = MainMenuController(collectionViewLayout: layout)
         window?.rootViewController = UINavigationController(rootViewController: mainMenuController)
         
-        UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
+//        UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
         
         // Nav bar appearance
-        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 14, green: 14, blue: 236)
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        application.statusBarStyle = .lightContent
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        navigationBarAppearance.barTintColor = UIColor.rgb(red: 14, green: 14, blue: 236)
+        navigationBarAppearance.isTranslucent = true
+        
+        if let titleFont = UIFont(name: "Optima-Bold", size: 20) {
+            navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.font: titleFont, NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
+
+        if let customFont = UIFont(name: "Optima-Bold", size: 17) {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)
+        }
         
         return true
     }
@@ -56,7 +71,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-
