@@ -10,7 +10,8 @@ import UIKit
 
 class EquipmentController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    let mainMenuController = MainMenuController()
+    var mainMenuController: MainMenuController?
+    var poolDatas: [PoolData]?
     
     private let cellId = "cellId"
     
@@ -33,7 +34,7 @@ class EquipmentController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
         
 //        navigationItem.title = "Equipment"
-        mainMenuController.setBackgroundImage()
+        mainMenuController?.setBackgroundImage()
         
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = .white
@@ -51,16 +52,22 @@ class EquipmentController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: EquipmentCell
         
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! EquipmentCell
+        if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! EquipmentCell
+            
+            cell.poolData = poolDatas?[indexPath.item]
+            
+            let poolCategory = poolEquipment[indexPath.section]
+            print(poolCategory)
+            let product = poolCategory.products[indexPath.item]
+            
+            let poolData = PoolData(label: product.label, image: product.image, label2: product.label2, image2: product.image2, description: product.description)
+            cell.poolData = poolData
+            return cell
+        }
         
-        let poolCategory = poolEquipment[indexPath.section]
-        print(poolCategory)
-        let product = poolCategory.products[indexPath.item]
-        
-        let poolData = PoolData(label: product.label, image: product.image, label2: product.label2, image2: product.image2, description: product.description)
-        cell.poolData = poolData
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         return cell
     }
     
