@@ -9,9 +9,7 @@
 import UIKit
 
 class EquipmentCell: BaseCollectionCell {
-    
-//    var poolData: PoolData!
-    
+        
     var poolData: PoolData? {
         didSet {
             if let name = poolData?.label {
