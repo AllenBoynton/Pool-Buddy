@@ -8,32 +8,29 @@
 
 import UIKit
 
-class MainMenuCell: BaseCell {
+class MainMenuCell: BaseCollectionCell {
     
     let imageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "equipment1")
-        iv.layer.cornerRadius = 16
-        iv.layer.masksToBounds = true
-        return iv
+        let image = UIImageView()
+        image.layer.cornerRadius = 16
+        image.contentMode = .scaleAspectFit
+        return image
     }()
     
     let menuNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Category Name"
-        label.font = UIFont(name: "Optima-Bold", size: 18)
+        label.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 24)
         return label
     }()
     
     let dividerLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .darkGray
         return view
     }()
     
     override func setupViews() {
-        
-        
         
         addSubview(imageView)
         addSubview(menuNameLabel)
