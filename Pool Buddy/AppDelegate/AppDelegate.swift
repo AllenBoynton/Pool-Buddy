@@ -39,11 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barTintColor = UIColor.rgb(red: 14, green: 14, blue: 236)
         navigationBarAppearance.isTranslucent = true
         
-        if let titleFont = UIFont(name: "Optima-Bold", size: 20) {
+        if let titleFont = UIFont(name: "HelveticaNeue-CondensedBold", size: 20) {
             navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.font: titleFont, NSAttributedStringKey.foregroundColor: UIColor.white]
         }
 
-        if let customFont = UIFont(name: "Optima-Bold", size: 17) {
+        if let customFont = UIFont(name: "HelveticaNeue-CondensedBold", size: 17) {
             UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)
         }
         
