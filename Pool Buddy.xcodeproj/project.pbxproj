@@ -115,12 +115,13 @@
 			path = MainMenuControllers;
 			sourceTree = "<group>";
 		};
-		093D909B1FC1F39700B07D8A /* EquipmentController */ = {
+		093D909B1FC1F39700B07D8A /* CategoryControllers */ = {
 			isa = PBXGroup;
 			children = (
 				093D90981FC1D59800B07D8A /* EquipmentController.swift */,
 				0984D0E71FC2A41100EB6CA7 /* EquipmentDetailsVC.swift */,
 			);
+			name = CategoryControllers;
 			path = EquipmentController;
 			sourceTree = "<group>";
 		};
@@ -213,7 +214,7 @@
 			children = (
 				093D909A1FC1F33D00B07D8A /* MainMenuControllers */,
 				0984D0EF1FC3BA8500EB6CA7 /* DetailsController */,
-				093D909B1FC1F39700B07D8A /* EquipmentController */,
+				093D909B1FC1F39700B07D8A /* CategoryControllers */,
 				093D90971FC1D56300B07D8A /* CategoryControllers */,
 			);
 			path = Controller;
