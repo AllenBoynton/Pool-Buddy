@@ -42,7 +42,7 @@ class EquipmentDetailsVC: UICollectionViewController, UICollectionViewDelegateFl
         style.lineSpacing = 10
         
         // Creates the following text with text length
-        let range = NSMakeRange(0, attributedText.string.characters.count)
+        let range = NSMakeRange(0, String(describing: attributedText).count)
         attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: range)
         
         if let desc = poolData?.description {

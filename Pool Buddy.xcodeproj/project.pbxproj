@@ -100,13 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		093D90971FC1D56300B07D8A /* CategoryControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CategoryControllers;
-			sourceTree = "<group>";
-		};
 		093D909A1FC1F33D00B07D8A /* MainMenuControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +208,6 @@
 				093D909A1FC1F33D00B07D8A /* MainMenuControllers */,
 				0984D0EF1FC3BA8500EB6CA7 /* DetailsController */,
 				093D909B1FC1F39700B07D8A /* CategoryControllers */,
-				093D90971FC1D56300B07D8A /* CategoryControllers */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
