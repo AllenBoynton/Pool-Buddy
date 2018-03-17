@@ -44,12 +44,17 @@ class MainMenuController: UICollectionViewController , UICollectionViewDelegateF
     }
     
     func showAppDetail(_ app: PoolCategory) {
+        
         let layout = UICollectionViewFlowLayout()
         let equipmentController = EquipmentController(collectionViewLayout: layout)
         equipmentController.app = app
         navigationController?.pushViewController(equipmentController, animated: true)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cell selected")
+        
+    }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainMenuCell
