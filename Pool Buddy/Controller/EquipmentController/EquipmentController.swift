@@ -10,8 +10,9 @@ import UIKit
 
 class EquipmentController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var mainMenuController: MainMenuController?
-    var poolDatas: [PoolData]?
+    private var mainMenuController: MainMenuController?
+    private var poolDatas: [PoolData]?
+    private var poolCategory: PoolCategory?
     
     private let cellId = "cellId"
     
@@ -24,7 +25,6 @@ class EquipmentController: UICollectionViewController, UICollectionViewDelegateF
     
     var app: PoolCategory? {
         didSet {
-            
             navigationItem.title = app?.group
             print("\(String(describing: app?.group))")
         }
@@ -40,6 +40,12 @@ class EquipmentController: UICollectionViewController, UICollectionViewDelegateF
         collectionView?.backgroundColor = .white
         
         collectionView?.register(EquipmentCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let data = poolCategory?.data?[indexPath.item] {
+//            mainMenuController?.showAppDetail(data)
+//        }
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -72,6 +78,10 @@ class EquipmentController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
 }
