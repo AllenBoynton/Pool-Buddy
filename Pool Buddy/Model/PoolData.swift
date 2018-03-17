@@ -9,6 +9,7 @@
 import Foundation
 
 class PoolData {
+    
     fileprivate var _label: String!
     fileprivate var _image: String!
     fileprivate var _label2: String!
