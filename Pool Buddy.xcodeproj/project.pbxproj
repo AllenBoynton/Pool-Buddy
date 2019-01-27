@@ -558,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = "$(SRCROOT)/Pool Buddy/Utilities/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsmobileapps.Pool-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,7 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
 				INFOPLIST_FILE = "$(SRCROOT)/Pool Buddy/Utilities/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsmobileapps.Pool-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
